@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { VideoworkoutComponent } from './videoworkout/videoworkout.component';
+import { NguCarouselModule } from '@ngu/carousel';
 
 @NgModule({
   declarations: [
@@ -14,8 +15,8 @@ import { VideoworkoutComponent } from './videoworkout/videoworkout.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-    
+    AppRoutingModule,
+    NguCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
