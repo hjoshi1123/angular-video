@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import videojs from 'video.js';
 import { NguCarousel, NguCarouselStore, NguCarouselConfig } from '@ngu/carousel';
 
+
+
 @Component({
     selector: 'home-page',
     templateUrl: './home-page.component.html',
@@ -102,4 +104,5 @@ export class HomePageComponent implements OnInit {
     onmoveFn(data: NguCarouselStore) {
         console.log(data);
     }
+    
 }

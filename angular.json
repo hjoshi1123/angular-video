@@ -123,6 +123,7 @@
   },
   "defaultProject": "my-app",
   "cli": {
-    "analytics": "5936b5a3-5fb3-49dd-8b99-e671b6cae1e2"
+    "defaultCollection": "@nativescript/schematics",
+    "analytics": false
   }
 }
