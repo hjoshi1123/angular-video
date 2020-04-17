@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 //import { NguCarouselConfig } from '@ngu/carousel';
 import videojs from 'video.js';
 import { NguCarousel, NguCarouselStore, NguCarouselConfig } from '@ngu/carousel';
@@ -10,7 +10,7 @@ import { NguCarousel, NguCarouselStore, NguCarouselConfig } from '@ngu/carousel'
     templateUrl: './home-page.component.html',
     //   styleUrls: ['./app.component.css']
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent implements OnInit, AfterViewInit {
     title = 'Angular demo app';
 
     imgags = [
@@ -42,6 +42,15 @@ export class HomePageComponent implements OnInit {
     };
 
     constructor() { }
+    ngAfterViewInit() {
+        var myPlayer = videojs('my-video');
+
+        myPlayer.src({ type: 'video/mp4', src: '../../assets/Videos/eighteen-mb-video-sample.mp4' });
+        // myPlayer.ready(function() {
+        //    // tech() will error with no argument
+        //    var tech = myPlayer.tech({IWillNotUseThisInPlugins: true});
+        // });
+    }
 
     ngOnInit() {
         this.carouselTileItems.forEach(el => {
@@ -49,24 +58,18 @@ export class HomePageComponent implements OnInit {
         });
 
 
-        //     var myPlayer = videojs('my-video');
 
-        // myPlayer.src({type: 'video/mp4', src: '../../assets/Videos/eighteen-mb-video-sample.mp4'});
-        // myPlayer.ready(function() {
-        //    // tech() will error with no argument
-        //    var tech = myPlayer.tech({IWillNotUseThisInPlugins: true});
-        // });
 
     }
 
     onChangeVideo(vidIdx: number) {
         var myPlayer = videojs('my-video');
         if (vidIdx == 1) {
-            myPlayer.src({type: 'video/mp4', src: '../../assets/Videos/eighteen-mb-video-sample.mp4'});
+            myPlayer.src({ type: 'video/mp4', src: '../../assets/Videos/eighteen-mb-video-sample.mp4' });
         } else if (vidIdx == 2) {
-            myPlayer.src({type: 'video/mp4', src: '../../assets/Videos/big-buck-bunny.mp4'});
+            myPlayer.src({ type: 'video/mp4', src: '../../assets/Videos/big-buck-bunny.mp4' });
         } else if (vidIdx == 3) {
-            myPlayer.src({type: 'video/mp4', src: '../../assets/Videos/1280.mp4'});
+            myPlayer.src({ type: 'video/mp4', src: '../../assets/Videos/1280.mp4' });
         }
     }
 
@@ -104,5 +107,5 @@ export class HomePageComponent implements OnInit {
     onmoveFn(data: NguCarouselStore) {
         console.log(data);
     }
-    
+
 }
