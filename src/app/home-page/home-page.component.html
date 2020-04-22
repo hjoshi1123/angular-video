@@ -416,11 +416,27 @@
       <script src="https://vjs.zencdn.net/7.7.5/video.js"></script>
     </body>
 
+    <section>
+      <div class="example-button-row">
     <button mat-raised-button color="primary" (click)="onChangeVideo(1)">View earth video</button>
     <button mat-raised-button color="primary" (click)="onChangeVideo(2)">View bunny video</button>
     <button mat-raised-button color="primary" (click)="onChangeVideo(3)">View mountain video</button>
+      </div>
+    </section>
 
+<div class="card-div">
+    <card [title]="'Week based'">
+      <p>
+        Access all the weekly workouts right from the comfort of your home.
+      </p>
+    </card>
 
+    <card [title]="'Body based'">
+      <p>
+        Find workouts suitable to your body type.
+      </p>
+    </card>
+  </div>
     <!-- <ngu-carousel
       [inputs]="carouselTile"
       (onMove)="onmoveFn($event)">

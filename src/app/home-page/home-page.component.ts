@@ -8,7 +8,7 @@ import { NguCarousel, NguCarouselStore, NguCarouselConfig } from '@ngu/carousel'
 @Component({
     selector: 'home-page',
     templateUrl: './home-page.component.html',
-    //   styleUrls: ['./app.component.css']
+      styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit, AfterViewInit {
     title = 'Angular demo app';
