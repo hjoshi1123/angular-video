@@ -42,8 +42,8 @@
     height: 100px;
     display: flex;
     align-items: center;
-    background-color: #DCDCDC;
-    color: white;
+    background-color:transparent;
+    color: red;
     font-weight: 600;
   }
 
@@ -61,6 +61,18 @@
   .toolbar #twitter-logo:hover {
     opacity: 0.8;
   }
+  .bg {
+  /* The image used */
+  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+
+  /* Half height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
   .content {
     display: flex;
@@ -248,11 +260,6 @@
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   }
 
-  .github-star-badge:hover {
-    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-    border-color: rgba(27, 31, 35, .35);
-    background-position: -.5em;
-  }
 
   .github-star-badge .material-icons {
     height: 16px;
@@ -392,10 +399,16 @@
 
     <!-- <ngu-carousel [inputs]="carouselTile" >
         </ngu-carousel> -->
+        <div class="bg"></div>
 
-    <p>videoworkout works!</p>
+        <p class="py-5 text-center">This example creates a full page background image. Try to resize the browser
+          window to see
+          how it always will cover the full screen (when scrolled to top), and that it scales nicely on all screen
+          sizes.</p>
+  <p>videoworkout works!</p>
 
     <head>
+     
       <link href="https://vjs.zencdn.net/7.7.5/video-js.css" rel="stylesheet" />
 
       <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->

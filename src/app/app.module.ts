@@ -55,6 +55,7 @@ import { DialogComponent } from './modal/modal.component';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot()
   ],
   exports: [
     A11yModule,
