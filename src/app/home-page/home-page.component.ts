@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 //import { NguCarouselConfig } from '@ngu/carousel';
 import videojs from 'video.js';
 import { NguCarousel, NguCarouselStore, NguCarouselConfig } from '@ngu/carousel';
-
+import Swiper from 'swiper';
 
 
 @Component({
@@ -50,6 +50,20 @@ export class HomePageComponent implements OnInit, AfterViewInit {
         //    // tech() will error with no argument
         //    var tech = myPlayer.tech({IWillNotUseThisInPlugins: true});
         // });
+
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 6,
+            spaceBetween: 10,
+            slidesPerGroup: 2,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          });
     }
 
     ngOnInit() {
@@ -72,6 +86,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
             myPlayer.src({ type: 'video/mp4', src: '../../assets/Videos/1280.mp4' });
         }
     }
+    
 
     public carouselTileLoad(j) {
         // console.log(this.carouselTiles[j]);
